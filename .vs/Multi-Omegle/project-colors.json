@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "b447fdb3-e9b0-46d8-91e9-2aa0c203e2f6": {
+      "ProjectGuid": "b447fdb3-e9b0-46d8-91e9-2aa0c203e2f6",
+      "DisplayName": "Multi-Omegle",
+      "ColorIndex": 0
+    },
+    "2e832bf1-6728-4a6a-b75a-febfdc40c189": {
+      "ProjectGuid": "2e832bf1-6728-4a6a-b75a-febfdc40c189",
+      "DisplayName": "OmegleSus",
+      "ColorIndex": 1
+    }
+  },
+  "NextColorIndex": 2
+}

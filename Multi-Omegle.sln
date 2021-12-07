@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Multi-Omegle", "Multi-Omegle\Multi-Omegle.csproj", "{B447FDB3-E9B0-46D8-91E9-2AA0C203E2F6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OmegleSus", "OmegleSus\OmegleSus.csproj", "{2E832BF1-6728-4A6A-B75A-FEBFDC40C189}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B447FDB3-E9B0-46D8-91E9-2AA0C203E2F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B447FDB3-E9B0-46D8-91E9-2AA0C203E2F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B447FDB3-E9B0-46D8-91E9-2AA0C203E2F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B447FDB3-E9B0-46D8-91E9-2AA0C203E2F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E832BF1-6728-4A6A-B75A-FEBFDC40C189}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E832BF1-6728-4A6A-B75A-FEBFDC40C189}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E832BF1-6728-4A6A-B75A-FEBFDC40C189}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E832BF1-6728-4A6A-B75A-FEBFDC40C189}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3FDB3153-CBCA-4921-98D3-8685E84969FB}
+	EndGlobalSection
+EndGlobal
