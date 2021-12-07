@@ -1,0 +1,1 @@
+Multi-Omegle.exe -port 6969 -banip 192.168.1.222

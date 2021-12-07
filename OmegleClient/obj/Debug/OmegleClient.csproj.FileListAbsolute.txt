@@ -1,0 +1,13 @@
+D:\Work\Multi-Omegle\OmegleClient\bin\Debug\OmegleSus.exe.config
+D:\Work\Multi-Omegle\OmegleClient\bin\Debug\OmegleSus.exe
+D:\Work\Multi-Omegle\OmegleClient\bin\Debug\OmegleSus.pdb
+D:\Work\Multi-Omegle\OmegleClient\bin\Debug\WebDriver.dll
+D:\Work\Multi-Omegle\OmegleClient\obj\Debug\OmegleClient.csproj.AssemblyReference.cache
+D:\Work\Multi-Omegle\OmegleClient\obj\Debug\OmegleClient.csproj.SuggestedBindingRedirects.cache
+D:\Work\Multi-Omegle\OmegleClient\obj\Debug\OmegleSus.Properties.Resources.resources
+D:\Work\Multi-Omegle\OmegleClient\obj\Debug\OmegleSus.Main.resources
+D:\Work\Multi-Omegle\OmegleClient\obj\Debug\OmegleClient.csproj.GenerateResource.cache
+D:\Work\Multi-Omegle\OmegleClient\obj\Debug\OmegleClient.csproj.CoreCompileInputs.cache
+D:\Work\Multi-Omegle\OmegleClient\obj\Debug\OmegleClient.csproj.CopyComplete
+D:\Work\Multi-Omegle\OmegleClient\obj\Debug\OmegleSus.exe
+D:\Work\Multi-Omegle\OmegleClient\obj\Debug\OmegleSus.pdb

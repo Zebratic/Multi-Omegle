@@ -1,0 +1,8 @@
+D:\Work\Multi-Omegle\Multi-Omegle\bin\Debug\Multi-Omegle.exe.config
+D:\Work\Multi-Omegle\Multi-Omegle\bin\Debug\Multi-Omegle.exe
+D:\Work\Multi-Omegle\Multi-Omegle\bin\Debug\Multi-Omegle.pdb
+D:\Work\Multi-Omegle\Multi-Omegle\obj\Debug\Multi-Omegle.csproj.AssemblyReference.cache
+D:\Work\Multi-Omegle\Multi-Omegle\obj\Debug\Multi-Omegle.csproj.SuggestedBindingRedirects.cache
+D:\Work\Multi-Omegle\Multi-Omegle\obj\Debug\Multi-Omegle.csproj.CoreCompileInputs.cache
+D:\Work\Multi-Omegle\Multi-Omegle\obj\Debug\Multi-Omegle.exe
+D:\Work\Multi-Omegle\Multi-Omegle\obj\Debug\Multi-Omegle.pdb
