@@ -115,9 +115,13 @@ namespace Multi_Omegle
                                             Client client = ConnectedClients.Find(x => x.TCPClient == tcpClient);
                                             if (client != null)
                                             {
-                                                ConnectedClients.Remove(client);
-                                                client.TCPClient.Close();
-                                                return;
+                                                try
+                                                {
+                                                    ConnectedClients.Remove(client);
+                                                    client.TCPClient.Close();
+                                                    return;
+                                                }
+                                                catch { }
                                             }
                                         }
                                         break;
@@ -126,14 +130,14 @@ namespace Multi_Omegle
                                         {
                                             Utils.WriteKey("[MULTI-OMEGLE]", $"New omegle user!", true);
                                             foreach (Client client in ConnectedClients)
-                                                SendMessageToClient(client.TCPClient.GetStream(), recievedData);
+                                                try { SendMessageToClient(client.TCPClient.GetStream(), recievedData); } catch { }
                                         }
                                         break;
 
                                     default:
                                         Console.WriteLine($"Redirecting: \"{recievedData}\" to all clients");
                                         foreach (Client client in ConnectedClients)
-                                            SendMessageToClient(client.TCPClient.GetStream(), recievedData + "<-->");
+                                            try { SendMessageToClient(client.TCPClient.GetStream(), recievedData + "<-->"); } catch { }
                                         break;
                                 }
                             }
