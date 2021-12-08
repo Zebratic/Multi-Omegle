@@ -229,7 +229,7 @@ namespace OmegleSus
         {
             if (!string.IsNullOrEmpty(txbMessage.Text) && txbMessage.Text != " ")
             {
-                string msg = $"{txbMessage.Text} - MAHATMA GHANDI :3";
+                string msg = txbMessage.Text;
                 new Thread(() =>
                 {
                     ServerCommands.BuildCommand(ServerCommands.SendMessage, msg + "<---->You");
