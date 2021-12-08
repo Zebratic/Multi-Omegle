@@ -48,9 +48,17 @@ namespace OmegleSus
             try
             {
                 webdriver.Navigate().GoToUrl("https://omegle.com");
+                Thread.Sleep(5000);
+                InjectScript();
+            }
+            catch { }
+        }
 
+        public void InjectScript()
+        {
+            try
+            {
                 try { new WebDriverWait(webdriver, waittime).Until(d => ((IJavaScriptExecutor)d).ExecuteScript("return document.readyState").Equals("complete")); } catch { Thread.Sleep(5000); }
-
                 ((IJavaScriptExecutor)webdriver).ExecuteScript(Encoding.UTF8.GetString(Convert.FromBase64String(MahatmaGhandi_aka_ip_puller_script)));
                 ((IJavaScriptExecutor)webdriver).ExecuteScript("alert(\"Successfully injected Multi-Omegle!\");");
             }
