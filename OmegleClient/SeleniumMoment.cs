@@ -65,6 +65,17 @@ namespace OmegleSus
             catch { }
         }
 
+
+        public void ForceEnableChatBox()
+        {
+            try
+            {
+                IWebElement element = webdriver.FindElement(By.ClassName("chatmsg disabled"));
+                ((IJavaScriptExecutor)webdriver).ExecuteScript("arguments[0].removeAttribute('disabled')", element);
+            }
+            catch { }
+        }
+
         public void ThreadLoop()
         {
             while (true)
@@ -88,9 +99,15 @@ namespace OmegleSus
         {
             try
             {
-                IWebElement chatbox = webdriver.FindElement(By.ClassName("chatmsg"));
-                chatbox.SendKeys(message);
-                chatbox.SendKeys(Keys.Enter);
+                ForceEnableChatBox();
+                IWebElement chatbox = null;
+                try { chatbox = webdriver.FindElement(By.ClassName("chatmsg")); }
+                catch { try { chatbox = webdriver.FindElement(By.ClassName("chatmsg disabled")); } catch { } }
+                if (chatbox != null)
+                {
+                    chatbox.SendKeys(message);
+                    chatbox.SendKeys(Keys.Enter);
+                }
             }
             catch { }
         }
