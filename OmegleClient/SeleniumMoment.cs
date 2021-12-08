@@ -104,6 +104,7 @@ namespace OmegleSus
                 // Preferred method
                 disconnectbtn.Click();
                 disconnectbtn.Click();
+                disconnectbtn.Click();
 
                 // Alternative method
                 //disconnectbtn.SendKeys(Keys.Escape);

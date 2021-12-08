@@ -77,10 +77,13 @@ namespace OmegleSus
                             switch (cmd)
                             {
                                 case "SendMessage":
+                                    string message = param.Split(new string[] { "<---->" }, StringSplitOptions.None)[0];
+                                    string who = param.Split(new string[] { "<---->" }, StringSplitOptions.None)[1];
                                     if (!string.IsNullOrWhiteSpace(param))
                                     {
                                         this.Invoke((MethodInvoker)delegate
                                         {
+                                            param = who + ": " + message;
                                             foreach (string msg in param.Split(new string[] { "\n" }, StringSplitOptions.None))
                                             {
                                                 chatDisplay.SelectionColor = Color.White;
@@ -92,7 +95,7 @@ namespace OmegleSus
                                         });
 
                                         if (cboxHost.Checked && seleniumMoment != null)
-                                            seleniumMoment.SendMessage(param);
+                                            seleniumMoment.SendMessage(message);
                                     }
                                     break;
 
@@ -120,23 +123,8 @@ namespace OmegleSus
 
                                 case "Skip":
                                     {
-                                        if (!string.IsNullOrEmpty(param))
-                                        {
-                                            this.Invoke((MethodInvoker)delegate
-                                            {
-                                                txbInfo.Clear();
-                                                chatDisplay.Clear();
-
-                                                foreach (string msg in param.Split(new string[] { "\n" }, StringSplitOptions.None))
-                                                {
-                                                    txbInfo.SelectionColor = Color.White;
-                                                    txbInfo.AppendText(txbInfo.Text == "" ? $"{msg}" : $"\n{msg}");
-                                                }
-
-                                                txbInfo.SelectionStart = txbInfo.Text.Length;
-                                                txbInfo.ScrollToCaret();
-                                            });
-                                        }
+                                        if (cboxHost.Checked && seleniumMoment != null)
+                                            seleniumMoment.Skip();
                                     }
                                     break;
 
@@ -225,7 +213,7 @@ namespace OmegleSus
                 string msg = txbMessage.Text;
                 new Thread(() =>
                 {
-                    ServerCommands.BuildCommand(ServerCommands.SendMessage, msg);
+                    ServerCommands.BuildCommand(ServerCommands.SendMessage, msg + "<---->You");
 
                     txbMessage.Invoke((MethodInvoker)delegate { txbMessage.Text = ""; });
                 }).Start();
