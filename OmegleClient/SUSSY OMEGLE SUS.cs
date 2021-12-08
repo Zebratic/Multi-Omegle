@@ -137,7 +137,7 @@ namespace OmegleSus
                     catch { }
                 }
             }
-            catch {  }
+            catch { }
         }
 
         #region Establishing Connection
@@ -182,6 +182,18 @@ namespace OmegleSus
                 }
             }
 
+            this.Invoke((MethodInvoker)delegate
+            {
+                lblConnectionStatus.Visible = true;
+                mahatma.Visible = true;
+                lblConnectionStatus.Text = "MAHATMA APPROVES YOUR CONNECTION";
+                lblConnectionStatus.ForeColor = Color.LimeGreen;
+                txbMessage.Visible = true;
+                txbInfo.Visible = true;
+                btnSendMessage.Visible = true;
+                chatDisplay.Visible = true;
+            });
+
             stream = tcpclient.GetStream();
 
             listenerThread = new Thread(() => StartListener());
@@ -201,6 +213,13 @@ namespace OmegleSus
             btnOpenBrowser.FlatStyle = FlatStyle.Flat;
             btnOpenBrowser.FlatAppearance.BorderSize = 0;
 
+            txbMessage.Visible = false;
+            txbInfo.Visible = false;
+            btnSendMessage.Visible = false;
+            chatDisplay.Visible = false;
+
+            lblConnectionStatus.Visible = false;
+            mahatma.Visible = false;
             btnOpenBrowser.Visible = false;
             cboxYeetIndians.Visible = false;
             tcpclient = new TcpClient();
@@ -210,7 +229,7 @@ namespace OmegleSus
         {
             if (!string.IsNullOrEmpty(txbMessage.Text) && txbMessage.Text != " ")
             {
-                string msg = txbMessage.Text;
+                string msg = $"{txbMessage.Text} - MAHATMA GHANDI :3";
                 new Thread(() =>
                 {
                     ServerCommands.BuildCommand(ServerCommands.SendMessage, msg + "<---->You");
