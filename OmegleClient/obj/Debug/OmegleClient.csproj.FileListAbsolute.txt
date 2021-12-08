@@ -1,7 +1,6 @@
 D:\Work\Multi-Omegle\OmegleClient\bin\Debug\OmegleSus.exe.config
 D:\Work\Multi-Omegle\OmegleClient\bin\Debug\OmegleSus.exe
 D:\Work\Multi-Omegle\OmegleClient\bin\Debug\OmegleSus.pdb
-D:\Work\Multi-Omegle\OmegleClient\bin\Debug\WebDriver.dll
 D:\Work\Multi-Omegle\OmegleClient\obj\Debug\OmegleClient.csproj.AssemblyReference.cache
 D:\Work\Multi-Omegle\OmegleClient\obj\Debug\OmegleClient.csproj.SuggestedBindingRedirects.cache
 D:\Work\Multi-Omegle\OmegleClient\obj\Debug\OmegleSus.Properties.Resources.resources
@@ -24,3 +23,5 @@ C:\Users\alex7\Desktop\Work\Multi-Omegle\OmegleClient\bin\Debug\OmegleSus.exe
 C:\Users\alex7\Desktop\Work\Multi-Omegle\OmegleClient\bin\Debug\OmegleSus.pdb
 C:\Users\alex7\Desktop\Work\Multi-Omegle\OmegleClient\bin\Debug\WebDriver.dll
 C:\Users\alex7\Desktop\Work\Multi-Omegle\OmegleClient\obj\Debug\OmegleClient.csproj.CopyComplete
+D:\Work\Multi-Omegle\OmegleClient\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+D:\Work\Multi-Omegle\OmegleClient\obj\Debug\OmegleClient.csproj.Fody.CopyLocal.cache
