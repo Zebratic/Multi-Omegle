@@ -255,5 +255,14 @@ namespace OmegleSus
 
             seleniumMoment = new SeleniumMoment();
         }
+
+        private void txbMessage_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == System.Windows.Forms.Keys.Enter && e.Modifiers != System.Windows.Forms.Keys.Shift)
+            {
+                e.SuppressKeyPress = true;
+                btnSendMessage.PerformClick();
+            }
+        }
     }
 }

@@ -116,6 +116,7 @@
             this.txbMessage.Size = new System.Drawing.Size(371, 64);
             this.txbMessage.TabIndex = 7;
             this.txbMessage.Text = "";
+            this.txbMessage.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txbMessage_KeyDown);
             // 
             // btnConnect
             // 
