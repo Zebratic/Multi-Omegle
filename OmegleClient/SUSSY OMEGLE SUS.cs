@@ -58,6 +58,7 @@ namespace OmegleSus
                         while ((i = stream.Read(bytes, 0, bytes.Length)) != 0)
                         {
                             // Recieve incoming stream data
+                            recievedData = Encoding.UTF8.GetString(bytes, 0, i);
 
                             Console.WriteLine("DATA " + recievedData);
                             if (string.IsNullOrEmpty(recievedData))
@@ -75,7 +76,7 @@ namespace OmegleSus
 
                             switch (cmd)
                             {
-                                case "NewMessage":
+                                case "SendMessage":
                                     if (!string.IsNullOrWhiteSpace(param))
                                     {
                                         this.Invoke((MethodInvoker)delegate
@@ -89,10 +90,35 @@ namespace OmegleSus
                                             chatDisplay.SelectionStart = chatDisplay.Text.Length;
                                             chatDisplay.ScrollToCaret();
                                         });
+
+                                        if (cboxHost.Checked && seleniumMoment != null)
+                                            seleniumMoment.SendMessage(param);
                                     }
                                     break;
 
                                 case "GimmeInfoBitch":
+                                    {
+                                        if (!string.IsNullOrEmpty(param))
+                                        {
+                                            this.Invoke((MethodInvoker)delegate
+                                            {
+                                                txbInfo.Clear();
+                                                chatDisplay.Clear();
+
+                                                foreach (string msg in param.Split(new string[] { "\n" }, StringSplitOptions.None))
+                                                {
+                                                    txbInfo.SelectionColor = Color.White;
+                                                    txbInfo.AppendText(txbInfo.Text == "" ? $"{msg}" : $"\n{msg}");
+                                                }
+
+                                                txbInfo.SelectionStart = txbInfo.Text.Length;
+                                                txbInfo.ScrollToCaret();
+                                            });
+                                        }
+                                    }
+                                    break;
+
+                                case "Skip":
                                     {
                                         if (!string.IsNullOrEmpty(param))
                                         {

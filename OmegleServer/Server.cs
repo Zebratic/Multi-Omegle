@@ -85,7 +85,6 @@ namespace Multi_Omegle
                                     param = recievedData.Split(new string[] { "<-->" }, StringSplitOptions.None)[1];
                                 }
                                 catch { }
-                                finally { recievedData = string.Empty; }
 
                                 Regex rgx = new Regex("[^a-zA-Z0-9 -]");
                                 rgx.Replace(cmd, ""); // fix potential corrupted packet header
@@ -132,9 +131,9 @@ namespace Multi_Omegle
                                         break;
 
                                     default:
+                                        Console.WriteLine($"Redirecting: \"{recievedData}\" to all clients");
                                         foreach (Client client in ConnectedClients)
-                                            if (client.Host)
-                                                SendMessageToClient(client.TCPClient.GetStream(), recievedData);
+                                            SendMessageToClient(client.TCPClient.GetStream(), recievedData + "<-->");
                                         break;
                                 }
                             }

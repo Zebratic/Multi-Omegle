@@ -4,9 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Support.UI;
+using Keys = OpenQA.Selenium.Keys;
 
 namespace OmegleSus
 {
@@ -63,7 +65,7 @@ namespace OmegleSus
                 {
                     string ipinfo = webdriver.FindElement(By.ClassName("logitem")).Text;
                     if (ipinfo.Contains("ip"))
-                        Console.WriteLine("FOUND: " + ipinfo);
+                        MessageBox.Show("FOUND: " + ipinfo);
                 }
                 catch
                 {
@@ -81,12 +83,12 @@ namespace OmegleSus
                 // No method has been tested yet
                 
                 // Preferred method
-                ((IJavaScriptExecutor)webdriver).ExecuteScript($"postMessage(\"{message}\")");
+                //((IJavaScriptExecutor)webdriver).ExecuteScript($"postMessage(\"{message}\")");
                 
                 // Alternative method
-                //IWebElement chatbox = webdriver.FindElement(By.ClassName("chatmsg"));
-                //chatbox.SendKeys(message);
-                //chatbox.SendKeys(Keys.Enter);
+                IWebElement chatbox = webdriver.FindElement(By.ClassName("chatmsg"));
+                chatbox.SendKeys(message);
+                chatbox.SendKeys(Keys.Enter);
             }
             catch { }
         }
