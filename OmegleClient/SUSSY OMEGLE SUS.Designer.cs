@@ -42,6 +42,9 @@
             this.cboxYeetIndians = new System.Windows.Forms.CheckBox();
             this.btnOpenBrowser = new System.Windows.Forms.Button();
             this.txbInfo = new System.Windows.Forms.RichTextBox();
+            this.mahatma = new System.Windows.Forms.PictureBox();
+            this.lblConnectionStatus = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.mahatma)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSendMessage
@@ -200,12 +203,35 @@
             this.txbInfo.TabIndex = 13;
             this.txbInfo.Text = "";
             // 
+            // mahatma
+            // 
+            this.mahatma.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("mahatma.BackgroundImage")));
+            this.mahatma.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.mahatma.Location = new System.Drawing.Point(8, 6);
+            this.mahatma.Name = "mahatma";
+            this.mahatma.Size = new System.Drawing.Size(468, 63);
+            this.mahatma.TabIndex = 14;
+            this.mahatma.TabStop = false;
+            // 
+            // lblConnectionStatus
+            // 
+            this.lblConnectionStatus.AutoSize = true;
+            this.lblConnectionStatus.BackColor = System.Drawing.Color.Transparent;
+            this.lblConnectionStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblConnectionStatus.Location = new System.Drawing.Point(5, 6);
+            this.lblConnectionStatus.Name = "lblConnectionStatus";
+            this.lblConnectionStatus.Size = new System.Drawing.Size(90, 20);
+            this.lblConnectionStatus.TabIndex = 15;
+            this.lblConnectionStatus.Text = "<STATUS>";
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblConnectionStatus);
+            this.Controls.Add(this.mahatma);
             this.Controls.Add(this.txbInfo);
             this.Controls.Add(this.btnOpenBrowser);
             this.Controls.Add(this.cboxYeetIndians);
@@ -224,6 +250,7 @@
             this.Text = "SUSSY OMEGLE";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Main_FormClosing);
             this.Load += new System.EventHandler(this.Main_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.mahatma)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -243,6 +270,8 @@
         private System.Windows.Forms.CheckBox cboxYeetIndians;
         private System.Windows.Forms.Button btnOpenBrowser;
         private System.Windows.Forms.RichTextBox txbInfo;
+        private System.Windows.Forms.PictureBox mahatma;
+        private System.Windows.Forms.Label lblConnectionStatus;
     }
 }
 
