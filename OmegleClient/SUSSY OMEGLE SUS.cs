@@ -226,6 +226,9 @@ namespace OmegleSus
 
         private void Main_FormClosing(object sender, FormClosingEventArgs e)
         {
+            if (seleniumMoment != null)
+                seleniumMoment.Shutdown();
+
             ServerCommands.BuildCommand(ServerCommands.IDISCONNECT);
             Application.Exit();
             Environment.Exit(69);
@@ -233,6 +236,9 @@ namespace OmegleSus
 
         private void btnOpenBrowser_Click(object sender, EventArgs e)
         {
+            if (seleniumMoment != null)
+                seleniumMoment.Shutdown();
+
             seleniumMoment = new SeleniumMoment();
         }
     }

@@ -11,3 +11,16 @@ D:\Work\Multi-Omegle\OmegleClient\obj\Debug\OmegleClient.csproj.CoreCompileInput
 D:\Work\Multi-Omegle\OmegleClient\obj\Debug\OmegleClient.csproj.CopyComplete
 D:\Work\Multi-Omegle\OmegleClient\obj\Debug\OmegleSus.exe
 D:\Work\Multi-Omegle\OmegleClient\obj\Debug\OmegleSus.pdb
+C:\Users\alex7\Desktop\Work\Multi-Omegle\OmegleClient\obj\Debug\OmegleClient.csproj.AssemblyReference.cache
+C:\Users\alex7\Desktop\Work\Multi-Omegle\OmegleClient\obj\Debug\OmegleClient.csproj.SuggestedBindingRedirects.cache
+C:\Users\alex7\Desktop\Work\Multi-Omegle\OmegleClient\obj\Debug\OmegleSus.Properties.Resources.resources
+C:\Users\alex7\Desktop\Work\Multi-Omegle\OmegleClient\obj\Debug\OmegleSus.Main.resources
+C:\Users\alex7\Desktop\Work\Multi-Omegle\OmegleClient\obj\Debug\OmegleClient.csproj.GenerateResource.cache
+C:\Users\alex7\Desktop\Work\Multi-Omegle\OmegleClient\obj\Debug\OmegleClient.csproj.CoreCompileInputs.cache
+C:\Users\alex7\Desktop\Work\Multi-Omegle\OmegleClient\obj\Debug\OmegleSus.exe
+C:\Users\alex7\Desktop\Work\Multi-Omegle\OmegleClient\obj\Debug\OmegleSus.pdb
+C:\Users\alex7\Desktop\Work\Multi-Omegle\OmegleClient\bin\Debug\OmegleSus.exe.config
+C:\Users\alex7\Desktop\Work\Multi-Omegle\OmegleClient\bin\Debug\OmegleSus.exe
+C:\Users\alex7\Desktop\Work\Multi-Omegle\OmegleClient\bin\Debug\OmegleSus.pdb
+C:\Users\alex7\Desktop\Work\Multi-Omegle\OmegleClient\bin\Debug\WebDriver.dll
+C:\Users\alex7\Desktop\Work\Multi-Omegle\OmegleClient\obj\Debug\OmegleClient.csproj.CopyComplete

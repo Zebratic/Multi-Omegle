@@ -78,25 +78,42 @@ namespace OmegleSus
         {
             try
             {
+                // No method has been tested yet
+                
+                // Preferred method
                 ((IJavaScriptExecutor)webdriver).ExecuteScript($"postMessage(\"{message}\")");
-                IWebElement chatbox = webdriver.FindElement(By.ClassName("chatmsg"));
-                chatbox.SendKeys(message);
-                chatbox.SendKeys(Keys.Enter);
+                
+                // Alternative method
+                //IWebElement chatbox = webdriver.FindElement(By.ClassName("chatmsg"));
+                //chatbox.SendKeys(message);
+                //chatbox.SendKeys(Keys.Enter);
             }
-            catch
-            {
-
-            }
+            catch { }
         }
 
         public void Skip()
         {
+            try
+            {
+                // No method has been tested yet
 
+                IWebElement disconnectbtn = webdriver.FindElement(By.ClassName("disconnectbtn"));
+
+                // Preferred method
+                disconnectbtn.Click();
+                disconnectbtn.Click();
+
+                // Alternative method
+                //disconnectbtn.SendKeys(Keys.Escape);
+                //disconnectbtn.SendKeys(Keys.Escape);
+            }
+            catch { }
         }
+
+        public void Shutdown() { try { webdriver.Quit(); } catch { } }
 
         // Send messages
         // Yeet indians
         // Skip
-
     }
 }
